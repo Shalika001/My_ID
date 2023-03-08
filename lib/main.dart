@@ -4,9 +4,14 @@ void main() => runApp(MaterialApp(
   home: MyCard(),
 ));
 
-class MyCard extends StatelessWidget {
+class MyCard extends StatefulWidget {
   const MyCard({Key? key}) : super(key: key);
 
+  @override
+  State<MyCard> createState() => _MyCardState();
+}
+
+class _MyCardState extends State<MyCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +42,7 @@ class MyCard extends StatelessWidget {
               style: TextStyle(
                 color: Colors.blue[900],
                 letterSpacing: 2.0,
-                fontSize: 21.0,
+                fontSize: 15.0,
               ),
             ),
             SizedBox(height: 10.0),
@@ -56,7 +61,7 @@ class MyCard extends StatelessWidget {
               style: TextStyle(
                 color: Colors.blue[900],
                 letterSpacing: 2.0,
-                fontSize: 21.0,
+                fontSize: 15.0,
               ),
             ),
             SizedBox(height: 10.0),
@@ -93,4 +98,5 @@ class MyCard extends StatelessWidget {
     );
   }
 }
+
 
