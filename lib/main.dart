@@ -25,7 +25,16 @@ class MyCard extends StatelessWidget {
                'NAME',
               style: TextStyle(
                 color: Colors.blue[900],
-                letterSpacing: 2.0
+                letterSpacing: 2.0,
+              ),
+            ),
+            Text(
+              'Shalika',
+              style: TextStyle(
+                color: Colors.red[600],
+                letterSpacing: 2.0,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ],
