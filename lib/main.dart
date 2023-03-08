@@ -22,6 +22,9 @@ class MyCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/shalika.jpg'),
+            ),
             Text(
                'NAME',
               style: TextStyle(
