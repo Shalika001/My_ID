@@ -27,6 +27,7 @@ class MyCard extends StatelessWidget {
               style: TextStyle(
                 color: Colors.blue[900],
                 letterSpacing: 2.0,
+                fontSize: 21.0,
               ),
             ),
             SizedBox(height: 10.0),
@@ -45,6 +46,7 @@ class MyCard extends StatelessWidget {
               style: TextStyle(
                 color: Colors.blue[900],
                 letterSpacing: 2.0,
+                fontSize: 21.0,
               ),
             ),
             SizedBox(height: 10.0),
@@ -64,7 +66,15 @@ class MyCard extends StatelessWidget {
                   Icons.email,
                   color: Colors.blue[900],
                 ),
-
+                SizedBox(width: 10.0),
+                Text(
+                    'shalikaupamada@gmail.com',
+                    style: TextStyle(
+                      color: Colors.red[600],
+                      fontSize: 20.0,
+                      letterSpacing: 1.0,
+                    )
+                ),
               ],
             )
           ],
