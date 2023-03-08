@@ -41,7 +41,7 @@ class MyCard extends StatelessWidget {
             ),
             SizedBox(height: 40.0),
             Text(
-              'NAME',
+              'CURRENT LEVEL',
               style: TextStyle(
                 color: Colors.blue[900],
                 letterSpacing: 2.0,
@@ -49,14 +49,24 @@ class MyCard extends StatelessWidget {
             ),
             SizedBox(height: 10.0),
             Text(
-              'Shalika',
+              '10',
               style: TextStyle(
                 color: Colors.red[600],
                 letterSpacing: 2.0,
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
               ),
-            ),SizedBox(height: 40.0),
+            ),
+            SizedBox(height: 40.0),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.blue[900],
+                ),
+
+              ],
+            )
           ],
         ),
       ),
