@@ -1,28 +1,47 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
   home: MyCard(),
 ));
 
-class MyCard extends StatelessWidget {
+class MyCard extends StatefulWidget {
   const MyCard({Key? key}) : super(key: key);
+
+  @override
+  State<MyCard> createState() => _MyCardState();
+}
+
+class _MyCardState extends State<MyCard> {
+
+  int currentLevel = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[400],
       appBar: AppBar(
-        title: Text('My Id Card'),
+        title: const Text('My Id Card'),
         centerTitle: true,
         backgroundColor: Colors.grey[700],
         elevation: 0.0,
       ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          setState(() {
+            currentLevel += 1;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.red,
+      ),
+
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Center(
+            const Center(
               child: CircleAvatar(
                 backgroundImage: AssetImage('assets/shalika.jpg'),
                 radius: 45.0,
@@ -37,10 +56,10 @@ class MyCard extends StatelessWidget {
               style: TextStyle(
                 color: Colors.blue[900],
                 letterSpacing: 2.0,
-                fontSize: 21.0,
+                fontSize: 15.0,
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Text(
               'Shalika',
               style: TextStyle(
@@ -50,18 +69,18 @@ class MyCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 40.0),
+            const SizedBox(height: 40.0),
             Text(
               'CURRENT LEVEL',
               style: TextStyle(
                 color: Colors.blue[900],
                 letterSpacing: 2.0,
-                fontSize: 21.0,
+                fontSize: 15.0,
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Text(
-              '10',
+              '$currentLevel',
               style: TextStyle(
                 color: Colors.red[600],
                 letterSpacing: 2.0,
@@ -69,14 +88,14 @@ class MyCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 40.0),
+            const SizedBox(height: 40.0),
             Row(
               children: <Widget>[
                 Icon(
                   Icons.email,
                   color: Colors.blue[900],
                 ),
-                SizedBox(width: 10.0),
+                const SizedBox(width: 10.0),
                 Text(
                     'shalikaupamada@gmail.com',
                     style: TextStyle(
@@ -93,4 +112,5 @@ class MyCard extends StatelessWidget {
     );
   }
 }
+
 
